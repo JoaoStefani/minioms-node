@@ -1,4 +1,4 @@
-import { CREATED } from "http-status";
+import { CREATED, NOT_FOUND, OK } from "http-status";
 import { persistCustomer } from "./customer-business";
 import { createCustomerDeserializer } from "./customer-deserializer";
 import { createCustomerSerializer } from "./customer-serializer";
@@ -15,6 +15,18 @@ const createCustomer = (): CustomerCreationRequestHandler[] => {
     ]
 }
 
+const getCustomersAll = (): GetCustomersAllRequestHandler [] => {
+    return [
+
+    ]
+}
+
+const getCutomerById = (): GetCustomerByIdRequestHandler [] => {
+    return [
+
+    ]
+}
+
 export {
-    createCustomer
+    createCustomer, getCustomersAll, getCutomerById
 };
